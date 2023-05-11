@@ -12,4 +12,7 @@ public class MyHashTable<K,V> {
             return "{"+key+" "+value+"}";
         }
     }
+    private int capacity;
+    private int size;
+    private HashNode<K, V>[] table;
 }
