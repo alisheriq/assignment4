@@ -24,4 +24,29 @@ public class MyHashTable<K,V> {
         this.capacity = capacity;
         this.table = new HashNode[capacity];
     }
+    private int hash(K key){
+        String strKey = String.valueOf(key);
+        int hashCode = 0;
+        for (char c : key.toString().toCharArray()) {
+            hashCode = (31 * hashCode + c) % capacity;
+        }
+        return hashCode;
+    }
+
+
+    public void put(K key, V value){
+        int index = hash(key);
+        HashNode<K,V> node = table[index];
+        while (node != null) {
+            if (node.key.equals(key)) {
+                node.value = value;
+                return;
+            }
+            node = node.next;
+        }
+        HashNode<K,V> newNode = new HashNode<K,V>(key, value);
+        newNode.next = table[index];
+        table[index] = newNode;
+        size++;
+    }
 }
