@@ -22,5 +22,6 @@ public class Main {
             Student value = new Student("Student " + i, i);
             table.put(key, value);
         }
+        table.testTenThousand();
     }
 }

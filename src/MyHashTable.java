@@ -102,4 +102,15 @@ public class MyHashTable<K,V> {
         }
         return null;
     }
+    public void testTenThousand(){
+        for (int i = 0; i < capacity; i++) {
+            int count = 0;
+            HashNode<K, V> node = table[i];
+            while (node != null) {
+                count++;
+                node = node.next;
+            }
+            System.out.println("Bucket " + i + ": " + count + " entries");
+        }
+    }
 }
