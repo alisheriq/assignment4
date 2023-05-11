@@ -30,7 +30,7 @@ public class MyHashTable<K,V> {
         String strKey = String.valueOf(key);
         int hashCode = 0;
         for (char c : key.toString().toCharArray()) {
-            hashCode = (41 * hashCode + c) % capacity;
+            hashCode = (43 * hashCode + c) % capacity;
         }
         return hashCode;
     }
