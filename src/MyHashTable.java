@@ -20,10 +20,12 @@ public class MyHashTable<K,V> {
         this.capacity = 100;
         this.table = new HashNode[capacity];
     }
+    //Creates a new MyHashTable object with default capacity of 100.
     public MyHashTable(int capacity){
         this.capacity = capacity;
         this.table = new HashNode[capacity];
     }
+    //Creates a new MyHashTable object with the specified capacity.
     private int hash(K key){
         String strKey = String.valueOf(key);
         int hashCode = 0;
@@ -32,6 +34,7 @@ public class MyHashTable<K,V> {
         }
         return hashCode;
     }
+    //Private method that returns an index for the given key using a hashing function.
 
 
     public void put(K key, V value){
@@ -49,6 +52,7 @@ public class MyHashTable<K,V> {
         table[index] = newNode;
         size++;
     }
+    //Inserts the given key-value pair into the hash table. If the key already exists, it updates its value.
     public V get(K key){
         int index = hash(key);
         HashNode<K,V> node = table[index];
@@ -60,6 +64,7 @@ public class MyHashTable<K,V> {
         }
         return null;
     }
+    //Returns the value associated with the given key. If the key is not found, it returns null.
     public V remove(K key){
         int index = hash(key);
         HashNode<K,V> prev = null;
@@ -79,6 +84,7 @@ public class MyHashTable<K,V> {
         }
         return null;
     }
+    //Removes the key-value pair associated with the given key from the hash table. If the key is not found, it returns null.
     public boolean contains(V value){
         for (int i = 0; i < capacity; i++) {
             HashNode<K,V> node = table[i];
@@ -89,7 +95,9 @@ public class MyHashTable<K,V> {
                 node = node.next;
             }
         }
-        return false;}
+        return false;
+    }
+    //Returns true if the given value is present in the hash table. Otherwise, returns false.
     public K getKey(V value){
         for (int i = 0; i < capacity; i++) {
             HashNode<K,V> node = table[i];
@@ -102,6 +110,7 @@ public class MyHashTable<K,V> {
         }
         return null;
     }
+    //Returns the key associated with the given value. If the value is not found, it returns null.
     public void testTenThousand(){
         for (int i = 0; i < capacity; i++) {
             int count = 0;
@@ -113,4 +122,5 @@ public class MyHashTable<K,V> {
             System.out.println("Bucket " + i + ": " + count + " entries");
         }
     }
+    //Prints the number of entries in each bucket of the hash table. Used for testing purposes only.
 }
