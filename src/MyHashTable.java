@@ -15,4 +15,13 @@ public class MyHashTable<K,V> {
     private int capacity;
     private int size;
     private HashNode<K, V>[] table;
+
+    public MyHashTable(){
+        this.capacity = 100;
+        this.table = new HashNode[capacity];
+    }
+    public MyHashTable(int capacity){
+        this.capacity = capacity;
+        this.table = new HashNode[capacity];
+    }
 }
