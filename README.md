@@ -16,8 +16,10 @@ IntelliJ IDEA
 The MyHashTable class is a generic class that implements a hash table data structure. It stores key-value pairs where keys and values can be of any data type. It has the following methods and constructors:
 
 Constructors:
+
 public MyHashTable()
 Creates a new MyHashTable object with default capacity of 100.
+  
 public MyHashTable(int capacity)
 Creates a new MyHashTable object with the specified capacity.
   
