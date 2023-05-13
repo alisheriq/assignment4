@@ -111,7 +111,7 @@ public class MyHashTable<K,V> {
         return null;
     }
     //Returns the key associated with the given value. If the value is not found, it returns null.
-    public void testTenThousand(){
+    public void getterOfTenThousand(){
         for (int i = 0; i < capacity; i++) {
             int count = 0;
             HashNode<K, V> node = table[i];
