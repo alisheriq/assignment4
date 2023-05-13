@@ -20,7 +20,15 @@ public class MyTestingClass {
         System.out.println(myHashTable.get("England"));
         System.out.println(myHashTable.get("Kazakhstan"));
     }
-
+    public void testRemoveGet(){
+        myHashTable.put("Poland", "Warsaw");
+        myHashTable.put("Finland", "Helsinki");
+        myHashTable.put("Germany", "Berlin");
+        myHashTable.put("Australia", "Canberra");
+        myHashTable.remove("Finland");
+        System.out.println(myHashTable.get("Finland"));
+        System.out.println(myHashTable.get("Australia"));
+    }
     public void testTenThousand(){
         putterOfTenThousand();
         table.getterOfTenThousand();
