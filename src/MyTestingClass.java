@@ -4,11 +4,21 @@ public class MyTestingClass {
     private int x;
     private int y;
     MyHashTable<MyTestingClass, Student> table = new MyHashTable<>();
+    MyHashTable myHashTable = new MyHashTable();
     Random random = new Random();
 
     public MyTestingClass(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+    public void testPutGet(){
+        myHashTable.put("France", "Paris");
+        myHashTable.put("England", "London");
+        myHashTable.put("Switzerland", "Geneva");
+        myHashTable.put("Mexico", "Mexico");
+        System.out.println(myHashTable.get("France"));
+        System.out.println(myHashTable.get("England"));
+        System.out.println(myHashTable.get("Kazakhstan"));
     }
 
     public void testTenThousand(){
