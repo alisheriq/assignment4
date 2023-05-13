@@ -60,6 +60,7 @@ Overrides the default toString() method to return a string representation of the
 
 <details>
 <summary>myTestingClass and Student classes</summary>
+We need this classes to test our MyHashTable class on the range of 10.000 entries for uniform distribution
 MyTestingClass:
 public MyTestingClass(int x, int y): Constructor that creates an instance of MyTestingClass with the specified x and y values.
  
