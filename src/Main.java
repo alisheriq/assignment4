@@ -5,6 +5,7 @@ public class Main {
         MyTestingClass myTestingClass = new MyTestingClass(0, 0);
         //myTestingClass.testTenThousand();
         //myTestingClass.testPutGet();
-        myTestingClass.testRemoveGet();
+        //myTestingClass.testRemoveGet();
+        myTestingClass.testContainsGetKey();
     }
 }

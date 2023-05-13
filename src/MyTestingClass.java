@@ -29,6 +29,16 @@ public class MyTestingClass {
         System.out.println(myHashTable.get("Finland"));
         System.out.println(myHashTable.get("Australia"));
     }
+    public void testContainsGetKey(){
+        myHashTable.put("Poland", "Warsaw");
+        myHashTable.put("Finland", "Helsinki");
+        myHashTable.put("Switzerland", "Geneva");
+        myHashTable.put("Mexico", "Mexico");
+        System.out.println(myHashTable.contains("Finland"));
+        System.out.println(myHashTable.contains("South Korea"));
+        System.out.println(myHashTable.getKey("Moscow"));
+        System.out.println(myHashTable.getKey("Geneva"));
+    }
     public void testTenThousand(){
         putterOfTenThousand();
         table.getterOfTenThousand();
