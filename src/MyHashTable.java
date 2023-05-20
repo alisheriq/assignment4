@@ -84,6 +84,18 @@ public class MyHashTable<K,V> {
         }
         return null;
     }
+
+
+    public void remove(K key, V oldValue, V newValue){
+        int index = hash(key);
+        HashNode<K,V> curr = table[index];
+        while (curr != null) {
+            if (curr.value.equals(oldValue)) {
+                curr.value = newValue;
+            }
+            curr = curr.next;
+        }
+    }
     //Removes the key-value pair associated with the given key from the hash table. If the key is not found, it returns null.
     public boolean contains(V value){
         for (int i = 0; i < capacity; i++) {
